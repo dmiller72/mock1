@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EAEAEA;
+}
+
+a {
+    text-decoration: none
+}
+
+section {
+    width: 100%
+}
+.toggle {
+    background-color: #fef7f7;
+    justify-content: end; 
+    padding: .5rem;
+    display: none;
+}
+.toggle .line1, .toggle .line2, .toggle .line3 {
+    background-color: darkblue;
+    width: 1.5rem;
+    height: .3rem;
+    border-radius: 5px;
+    margin: .1rem;
+}
+/*Header Styling*/
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #fef7f7;
+    /* position: fixed; */
+    width: 100%;
+    /* z-index: 10; */
+    padding: 0 2rem; 
+    min-height: 10vh;
+    top: 0;
+} 
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header img {
+    width: 16rem; 
+    margin: 0 auto;
+}
+
+header>ul {
+    padding-right: 3rem;
+    font-size: 1.2em;
+}
+
+header>ul li {
+    margin-right: 1rem;
+}
+
+nav a:active,
+nav a:hover {
+    color: rgb(29, 55, 223)
+}
+
+nav ul li {
+    margin-right: 2rem;
+    padding-bottom: .5rem;
+} 
+
+nav ul li a {
+    padding-bottom: .5rem;
+}
+
+nav ul li a:hover {
+    border-bottom: #10218c solid 2px;
+    transition: ease-in;
+    transition-property: border;
+    transition-duration: .3s;
+}
+
+nav ul li:nth-child(4) {
+    padding-right: 0
+}
+
+header button {
+    padding: .7rem .5rem;
+    font-weight: bold;
+    background-color: #10218C;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+header button a {
+    color: white;
+    padding: .5rem .7rem;
+}
+
+header a {
+    color: black
+}
+
+nav ul {
+    font-weight: 700;
+}
+
+@media (max-width: 1066px) {
+    header {
+        flex-direction: column;
+    }
+    header img {
+        width: 14rem;
+        order: 0;
+        margin-bottom: .5rem;
+    }
+    nav {
+        width: 100%;
+        order: 1;
+    }
+    nav ul {
+        justify-content: space-around;
+    }
+    header > ul, header button {
+        display: none;
+    }
+}
+
+@media (max-width: 437px) {
+    .toggle img {
+        width: 8rem; 
+        grid-row: 1/4;
+        justify-self: center;
+    }
+    .toggle{
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+    .toggle .line1, .toggle .line2, .toggle .line3 {
+        grid-column: 2
+    }
+    .toggle .line1 {
+        align-self: end;
+    }
+    .toggle .line2 {
+        align-self: center;
+    }
+   
+    header img{
+        display: none;
+    }
+    nav ul{
+        display: block;
+        text-align: center;
+    }
+}
+
+/*Main Section*/ 
+
+main div {
+    height: 100vh;  
+    background-image: url(../images/Samsung-Galaxy-S8-Test-9425.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    /* background-position: top  center; */
+}
+
+main h1 {
+    padding: 17% 0 0 8%;
+    color: white;
+    font-size: 3em;
+}
+
+main button {
+    padding: .75rem;
+    background-color: white;
+    color: #10218C;
+    margin: 1rem 0 0 9.2rem;
+    font-weight: 700; 
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+main button a {
+    color: #10218C;
+    padding: 10px 15px;
+}
+
+
+/*//Form*/
+
+section {
+    margin-top: 4em;
+    width: 100%;
+    background-color: #EAEAEA;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.cognito {
+    width: 50%;
+    margin-left: 30%;
+    margin-bottom: 10px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	color: black;
+	grid-gap: 1rem;
+	width: 40%;
+	margin: 0 auto;
+	padding-bottom: 10rem;
+}
+
+.mine {
+	border-radius: 5px;
+	border: solid #ccc 1px;
+	height: 3em;
+	padding: .5rem;
+	box-sizing: border-box;
+	box-shadow: 1px 1px 2px inset rgba(0,0,0,.3);
+}
+
+input::placeholder {
+    color: rgb(179, 165, 172);
+    font-style: italic;
+}
+
+button[type=submit] {
+    padding: 10px 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #10218C;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    grid-column: 1 / span 2;
+}
+
+
+/*OUR PRODUCTS*/
+
+#services {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	margin: 0 5rem;
+	padding-bottom: 15rem;
+	grid-gap: 1rem;
+} 
+ 
+
+
+.product {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    text-align: center;
+    overflow: hidden;
+}
+   
+.product img {
+    width: 100%;
+    max-height: 623px; 
+    margin: 0 1rem; 
+}
+
+.product_text {
+    padding-top: 1rem; 
+}
+
+/*ABOUT US*/
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 375px auto;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+}
+#about-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #465468;
+    padding: 1em 0 0 0;
+}
+#about ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+#about ul li {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#about ul,
+#about p,
+#about button {
+    margin-bottom: 2em
+}
+#about button {
+    padding: 10px 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #10218C;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+#about-left h1 {
+    color: #8995B1;
+    font-size: 80px;
+    font-weight: 700;
+}
+#about-left p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-top: -2em;
+}
+#about-center h1 {
+    margin: 1em 0 1em 0
+}
+#about img {
+   width: 100%
+}
+.one {
+    border-bottom: 1px solid #8995B1;
+    border-right: 1px solid #8995B1;
+}
+.four {
+    border-top: 1px solid #8995B1;
+    border-left: 1px solid #8995B1;
+}
+#about-left div {
+    padding-top: 20px
+}
+#testimonials {
+    margin-top: 5em;
+    padding-top: 5em;
+    background: transparent;
+    /*background-image:url(../images/chicago-skyline-at-night-1476869511p8U.jpg);
+		background-attachment:fixed;
+		background-size:cover;*/
+    
+    width: 100%;
+    height: 600px;
+    color: white;
+    text-align: center;
+}
+
+/*BLOG SECTION*/
+.blog,
+.blog-short {
+    display: flex;
+}
+.blog {
+    /* width: 80%;*/
+    
+    margin: 0 auto;
+    justify-content: center;
+}
+.blog img {
+    max-width: 500px;
+    height: auto;
+}
+.blog-half {
+    text-align: center;
+    flex-basis: 28%;
+}
+.blog-short p,
+.blog-short h2 {
+    text-align: left
+}
+.blog-short {
+    padding: 1em 3em;
+}
+.blog-short p {
+    color: grey;
+    line-height: 1.5em;
+    padding-top: 1.2em;
+}
+.short-left {
+    margin-right: 2em
+}
+.blog-short p {
+    margin-top: .5em
+}
+h4 {
+    margin-top: -1.5em;
+    color: #009EDB;
+}
+h2 {
+    line-height: 1em
+}
+.short-left h1 {
+    color: #23259C
+}
+#map {
+    width: 100%;
+    height: 400px;
+    background: rgb(180, 174, 174);
+}
+footer {
+    color: #E9EAEA;
+    background-color: #363D41;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 250px;
+}
+footer h2 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    margin-bottom: 1em;
+}
+footer ul {
+    list-style: none;
+    font-size: 12px;
+}
+.quick::before {
+    font-family: FontAwesome;
+    content: '\f0a9';
+    margin-right: 5px;
+}
+footer li {
+    margin-bottom: .3rem;
+    font-size: 14px;
+}
+.line {
+    border-top: 1px solid #797979;
+    margin: 30px 0 0 20px;
+    width: 90%;
+}
+.copy {
+    flex-direction: column;
+    color: rgb(117, 117, 117);
+    text-align: center;
+    background: transparent;
+    font-size: 12px;
+    margin-top: 20px;
+}

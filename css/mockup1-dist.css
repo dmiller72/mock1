@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+	border:0;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:#EAEAEA;
+	}
+
+a{text-decoration:none}
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+/*Header Styling*/
+
+header {
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-top:20px;
+	padding-bottom:20px;
+	background-color:white;
+	position:fixed;
+	width:100%;
+		}
+header ul {
+	list-style:none;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	}
+header img {
+	max-width:15%;
+	margin: 0 auto;
+}
+header > ul {
+	padding-right:50px;
+	font-size:1.2em;
+	}
+
+header >ul li {margin-right:20px}
+
+nav a:active, nav a:hover {color:#10218C}
+
+nav ul li {
+	margin-right: 40px;
+	padding-bottom:5px;
+	}
+nav ul li a {padding-bottom: 5px}
+
+nav ul li a:hover {
+	border-bottom:#10218c solid 2px;
+	-webkit-transition:ease-in ;
+	-o-transition:ease-in ;
+	transition:ease-in ;
+	-webkit-transition-property:border;
+	-o-transition-property:border;
+	transition-property:border;
+	-webkit-transition-duration: .3s;
+	-o-transition-duration: .3s;
+	transition-duration: .3s;
+	}
+
+nav ul li:nth-child(4) {padding-right:0}
+
+
+header button {
+	padding: 10px 10px;
+	margin-right:20px;
+	font-weight:bold;
+	background-color: #10218C;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	text-transform:uppercase;
+	}
+header button a  {
+	color:white;
+	padding:10px 15px;
+	}
+
+header a {color:black}
+
+nav ul {
+	font-weight:700;
+	padding-left:100px;
+	}
+
+/*Main Section*/
+
+main {
+	padding-top:100px;
+	}
+
+main div {
+	height:900px;
+	background-image: url(../images/Samsung-Galaxy-S8-Test-9425.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+main h1 {
+	padding: 17% 0 0 8%;
+	color:white;
+	font-size:3em;
+}
+
+main button {
+	padding:10px 10px;
+	background-color:white;
+	color:#10218C;
+	margin: 10px 0 0 150px;
+	font-weight:700;
+	border-radius:5px;
+	text-transform:uppercase;
+}
+
+main button a  {
+	color:#10218C;
+	padding:10px 15px;
+	}
+	
+/*//Form*/
+
+section {
+	margin-top:4em;
+	width:100%;
+	background-color:#EAEAEA;
+	}
+ section h1 {
+	text-align:center;
+	font-size:3em;
+	text-transform:uppercase;
+	margin-bottom:20px;
+}
+.cognito {
+	width:50%;
+	margin-left:30%;
+	margin-bottom:10px;
+	}
+.grid {
+	display:grid;
+	grid-template-columns:50% 50%;
+	color:black;
+	grid-gap:2em;
+	width:50%;
+	margin:0 auto;
+	padding-bottom:100px;
+}
+
+.mine {
+/*	background-color:#E7EAF8;
+*/	border-radius:5px;
+	border: solid #ccc 1px;
+	height:3em;
+	padding:20px;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-box-shadow:1px 1px 8px grey;
+	box-shadow:1px 1px 8px grey; 
+}
+input::-webkit-input-placeholder {
+	color:#DAD8D9;
+	font-style:italic;
+}
+input:-ms-input-placeholder {
+	color:#DAD8D9;
+	font-style:italic;
+}
+input::placeholder {
+	color:#DAD8D9;
+	font-style:italic;
+}
+
+button[type=submit] {
+	padding: 10px 10px;
+/*	margin-right:20px;
+*/	font-weight:bold;
+	color:white;
+	background-color: #10218C;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	text-transform:uppercase;
+	grid-column: 1 / span 2;
+}
+
+			/*OUR PRODUCTS*/
+			
+#services {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 70%;
+	margin:0 auto;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	-ms-flex-pack:justify;
+	justify-content:space-between;
+	padding-bottom: 100px;
+}
+
+#products {margin-bottom:50px}
+
+			/*ABOUT US*/
+
+#about {
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 375px auto;
+	width:100%;
+	text-align:center;
+	background-color:white;
+	overflow:hidden;
+}
+#about-left {
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	background-color:#465468;
+	padding:1em 0 0 0;
+}
+
+#about ul {
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	list-style:none;
+}
+
+#about ul li {
+	text-transform:uppercase;
+	font-weight:bold;
+	}
+
+#about ul, #about p, #about button {margin-bottom:2em}
+
+#about button  {
+	padding: 10px 10px;
+	font-weight:bold;
+	color:white;
+	background-color: #10218C;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	text-transform:uppercase;
+}
+
+#about-left h1 {
+	color:#8995B1;
+	font-size:80px;
+	font-weight:700;
+}
+
+#about-left p {
+	color:white;
+	text-transform:uppercase;
+	font-size:1em;
+	letter-spacing:1px;
+	margin-top:-2em;
+}
+#about-center h1 {margin:1em 0 1em 0}
+#about img {
+        position:relative;
+		top:-45px;
+		left:60px;
+        max-width: 90%;
+        height: auto;
+    }
+	
+	.one {
+		border-bottom: 1px solid #8995B1;
+		border-right: 1px solid #8995B1;
+	}
+	
+	.four {
+		border-top:1px solid #8995B1;
+		border-left:1px solid #8995B1;
+	}
+	
+#about-left div {padding-top:20px}
+#testimonials {
+	margin-top:5em;
+		padding-top:5em;
+		background:transparent;
+		/*background-image:url(../images/chicago-skyline-at-night-1476869511p8U.jpg);
+		background-attachment:fixed;
+		background-size:cover;*/
+		width:100%;
+		height:600px;
+		color:white;
+		text-align:center;	
+}
