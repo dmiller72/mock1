@@ -8,7 +8,9 @@
     border: 0;
     box-sizing: border-box;
 }
-
+:root {
+    --bg:#fef7f7;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #EAEAEA;
@@ -22,7 +24,7 @@ section {
     width: 100%
 }
 .toggle {
-    background-color: #fef7f7;
+    background-color: var(--bg);
     justify-content: end; 
     padding: .5rem;
     display: none;
@@ -32,14 +34,14 @@ section {
     width: 1.5rem;
     height: .3rem;
     border-radius: 5px;
-    margin: .1rem;
+    margin: .2rem;
 }
 /*Header Styling*/
 
 header {
     display: flex;
     align-items: center;
-    background-color: #fef7f7;
+    background-color: var(--bg);
     /* position: fixed; */
     width: 100%;
     /* z-index: 10; */
@@ -115,6 +117,9 @@ nav ul {
 }
 
 @media (max-width: 1066px) {
+    body {
+        overflow-x: hidden; 
+    }
     header {
         flex-direction: column;
     }
@@ -136,6 +141,21 @@ nav ul {
 }
 
 @media (max-width: 437px) {
+    body {
+        overflow-x: hidden; 
+    }
+    header{
+        padding: 0;
+        position: absolute;
+        top: 6vh;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .show {
+        transform: translateX(0%);
+    }
+
     .toggle img {
         width: 8rem; 
         grid-row: 1/4;
@@ -145,9 +165,13 @@ nav ul {
         display: grid;
         grid-template-columns: 1fr auto;
     }
-    .toggle .line1, .toggle .line2, .toggle .line3 {
-        grid-column: 2
+    .bars  {
+        grid-column: 2;
+        cursor: pointer;
+        grid-row: 1/4; 
+        align-self: center;
     }
+    
     .toggle .line1 {
         align-self: end;
     }
@@ -158,9 +182,26 @@ nav ul {
     header img{
         display: none;
     }
+
     nav ul{
         display: block;
         text-align: center;
+    }
+    nav ul li {
+        margin: 0;
+        padding: 0;
+    } 
+
+    nav ul li a{
+        display: block;
+        padding: .5rem;
+    }
+  
+    nav ul li a:hover {
+        /* padding-bottom: .5rem; */
+        background-color: darkblue;
+        color: white;
+        border: 0;
     }
 }
 
@@ -171,13 +212,20 @@ main div {
     background-image: url(../images/Samsung-Galaxy-S8-Test-9425.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
-    /* background-position: top  center; */
+    background-position: top  center;
 }
 
 main h1 {
     padding: 17% 0 0 8%;
     color: white;
     font-size: 3em;
+}
+
+@media (max-width: 437px){
+    main h1 {
+        font-size: 2rem;
+        padding: 27rem 0 0 5rem;
+    }
 }
 
 main button {
@@ -206,7 +254,7 @@ section {
 
 section h1 {
     text-align: center;
-    font-size: 3em;
+    font-size: 3rem;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -226,6 +274,8 @@ section h1 {
 	margin: 0 auto;
 	padding-bottom: 10rem;
 }
+
+
 
 .mine {
 	border-radius: 5px;
