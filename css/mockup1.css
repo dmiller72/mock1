@@ -338,8 +338,6 @@ button[type=submit] {
 #about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 375px auto;
-    width: 100%;
     text-align: center;
     background-color: white;
     overflow: hidden;
@@ -348,7 +346,26 @@ button[type=submit] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #465468;
-    padding: 1em 0 0 0;
+    place-items: center;
+}
+
+#about-left div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#about-left div:first-child {
+    border-right: 1px solid #8995b1;
+    border-bottom: 1px solid #8995b1;
+}
+#about-left div:nth-child(2) {
+     border-bottom: 1px solid #8995b1;
+}
+#about-left div:nth-child(3) {
+    border-right: 1px solid #8995b1;
 }
 #about ul {
     display: flex;
@@ -362,7 +379,7 @@ button[type=submit] {
 #about ul,
 #about p,
 #about button {
-    margin-bottom: 2em
+    margin-bottom: 2em;
 }
 #about button {
     padding: 10px 10px;
@@ -386,22 +403,12 @@ button[type=submit] {
     margin-top: -2em;
 }
 #about-center h1 {
-    margin: 1em 0 1em 0
+    margin: 1em 0 1em 0;
 }
 #about img {
-   width: 100%
+   width: 100%;
 }
-.one {
-    border-bottom: 1px solid #8995B1;
-    border-right: 1px solid #8995B1;
-}
-.four {
-    border-top: 1px solid #8995B1;
-    border-left: 1px solid #8995B1;
-}
-#about-left div {
-    padding-top: 20px
-}
+
 #testimonials {
     margin-top: 5em;
     padding-top: 5em;
@@ -437,7 +444,7 @@ button[type=submit] {
 }
 .blog-short p,
 .blog-short h2 {
-    text-align: left
+    text-align: left;
 }
 .blog-short {
     padding: 1em 3em;
@@ -448,17 +455,17 @@ button[type=submit] {
     padding-top: 1.2em;
 }
 .short-left {
-    margin-right: 2em
+    margin-right: 2em;
 }
 .blog-short p {
-    margin-top: .5em
+    margin-top: .5em;
 }
 h4 {
     margin-top: -1.5em;
     color: #009EDB;
 }
 h2 {
-    line-height: 1em
+    line-height: 1em;
 }
 .short-left h1 {
     color: #23259C
