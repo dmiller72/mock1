@@ -11,6 +11,11 @@
 :root {
     --bg:#fef7f7;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+  
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #EAEAEA;
@@ -349,47 +354,6 @@ button[type=submit] {
     place-items: center;
 }
 
-#about-left div {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
-
-#about-left div:first-child {
-    border-right: 1px solid #8995b1;
-    border-bottom: 1px solid #8995b1;
-}
-#about-left div:nth-child(2) {
-     border-bottom: 1px solid #8995b1;
-}
-#about-left div:nth-child(3) {
-    border-right: 1px solid #8995b1;
-}
-#about ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
-#about ul li {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-#about ul,
-#about p,
-#about button {
-    margin-bottom: 2em;
-}
-#about button {
-    padding: 10px 10px;
-    font-weight: bold;
-    color: white;
-    background-color: #10218C;
-    letter-spacing: 1px;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
 #about-left h1 {
     color: #8995B1;
     font-size: 80px;
@@ -402,6 +366,82 @@ button[type=submit] {
     letter-spacing: 1px;
     margin-top: -2em;
 }
+
+#about-left div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;    
+}
+
+#about-left div:first-child {
+    border-right: 1px solid #8995b1;
+    border-bottom: 1px solid #8995b1;
+}
+
+#about-left div:nth-child(2) {
+     border-bottom: 1px solid #8995b1;
+}
+
+#about-left div:nth-child(3) {
+    border-right: 1px solid #8995b1;
+}
+
+#about ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#about ul li {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(196, 196, 196);
+    transition: 250ms;
+}
+
+#about-center ul li:hover, #about-center ul li.active{
+    color: black;
+    cursor: pointer;
+}
+.active {
+     color: black;
+    cursor: pointer;
+}
+#container {
+    position: relative;
+}
+
+#container p{
+    position: absolute;
+    left: 30%;
+}
+
+.zero {
+    opacity: 0;
+}
+
+#about ul,
+#about p,
+#about button {
+    margin-bottom: 2em;
+}
+
+#about-center p{
+    font-size: 2rem;
+}
+#about button {
+    padding: .8rem .8rem;
+    font-weight: bold;
+    color: white;
+    background-color: #10218C;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 6rem;;
+}
+
 #about-center h1 {
     margin: 1em 0 1em 0;
 }
@@ -413,10 +453,6 @@ button[type=submit] {
     margin-top: 5em;
     padding-top: 5em;
     background: transparent;
-    /*background-image:url(../images/chicago-skyline-at-night-1476869511p8U.jpg);
-		background-attachment:fixed;
-		background-size:cover;*/
-    
     width: 100%;
     height: 600px;
     color: white;
