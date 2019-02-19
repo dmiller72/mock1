@@ -349,7 +349,7 @@ button[type=submit] {
 /*ABOUT US*/
 #about {
     display: grid;
-    grid-template-columns: repeat (3, minmax(360px,1fr));
+    grid-template-columns: repeat(3, minmax(360px, 1fr));
     text-align: center;
     background-color: white;
 }
@@ -357,7 +357,7 @@ button[type=submit] {
 @media(max-width:437px) {
 #about {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
     background-color: white;
     overflow: hidden;
@@ -406,6 +406,7 @@ button[type=submit] {
 #about-left div:nth-child(3) {
     border-right: 1px solid #8995b1;
 }
+
 
 #about ul {
     display: flex;
