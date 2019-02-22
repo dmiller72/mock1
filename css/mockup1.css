@@ -354,7 +354,7 @@ button[type=submit] {
     background-color: white;
 }
 
-@media(max-width:437px) {
+@media(max-width:640px) {
 #about {
     display: flex;
     flex-direction: column;
