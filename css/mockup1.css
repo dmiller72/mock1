@@ -159,9 +159,9 @@ nav ul {
   html {
     overflow-x: hidden;
   }
-  /* body {
-        
-    } */
+  body {
+        overflow-x: hidden;
+    }
   header {
     padding: 0;
     position: absolute;
