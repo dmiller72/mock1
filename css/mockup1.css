@@ -341,17 +341,14 @@ button[type="submit"] {
   padding-bottom: 2rem;
   grid-gap: 1rem;
 }
-@media (max-width: 1298px) {
+@media(max-width: 1298px) {
   .product:last-child {
     grid-column: 2/3;
     grid-row: 2/3;
   }
 }
-@media (max-width: 473px) {
+@media(max-width: 473px) {
   #services {
-    /* margin: 0;
-        grid-template-columns: 1fr;
-        grid-gap: 0; */
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -374,6 +371,8 @@ button[type="submit"] {
 .product_text {
   padding-top: 1rem;
 }
+
+
 
 /*ABOUT US*/
 #about {
@@ -585,6 +584,12 @@ button[type="submit"] {
   padding: 1em 3em;
 }
 @media (max-width: 473px) {
+  .blog {
+    flex-direction: column;
+  }
+  .blog-half {
+    width: 100%
+  }
   .blog-short {
     padding: 0.5rem;
     line-height: normal;
